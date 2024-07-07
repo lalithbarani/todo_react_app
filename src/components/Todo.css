@@ -1,0 +1,69 @@
+.main-container {
+  max-width: 100%;
+  margin: auto;
+  padding-top: 50px;
+}
+
+.todolist-header {
+  font-weight: bold;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+/* Add this to your Todo.css */
+.todolist-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: darkgray; */
+  border-bottom: 1px;
+}
+
+.main-container .ant-btn {
+  margin-left: 10px;
+}
+
+/* TodoListItem.css */
+.todo-list-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.todo-mark-icon {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.todo-item p {
+  margin: 0;
+}
+
+.edit-icon, .delete-icon {
+  cursor: pointer;
+}
+
+.todo-section {
+  margin-bottom: 20px;
+}
+
+/* TodoListItem.css */
+.todo-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.ant-collapse-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ant-collapse-header .ant-typography {
+  flex: 1;
+}
+
+.ant-collapse-header div {
+  display: flex;
+  align-items: center;
+}
