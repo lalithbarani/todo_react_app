@@ -17,18 +17,16 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'  # or your project’s Node version
+          node-version: '18'
 
       - name: Install dependencies
         run: npm install
 
-      # - name: Run tests
-      #   run: npm test -- --watchAll=false
-
       - name: Build React app
         run: npm run build
 
-      - name: Move build to parent deploy folder
-        run: |
-          if not exist "..\deploy_folder" mkdir "..\deploy_folder"
-          xcopy /E /I /Y "build" "..\deploy_folder\"  
+      - name: Upload build folder
+        uses: actions/upload-artifact@v4
+        with:
+          name: react-build
+          path: build/
