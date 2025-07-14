@@ -8,6 +8,7 @@ const Todo = () => {
   const [todos, setTodos] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
 console.log("t",todos);
+console.log("isModalOpen",isModalOpen);
   const addTodo = (todo) => {
     if (!todo.name || !todo.description || !todo.date) return;
     setTodos([todo, ...todos]);
@@ -39,7 +40,7 @@ console.log("t",todos);
   return (
     <section className="main-container">
       <h1 className="todolist-header">
-        TODO List
+        TODO List update 2025
         <Button
           type="primary"
           onClick={() => setIsModalOpen(true)}
