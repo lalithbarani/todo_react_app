@@ -27,3 +27,8 @@ jobs:
 
       - name: Build React app
         run: npm run build
+
+      - name: Move build to parent deploy folder
+        run: |
+          if not exist "..\deploy_folder" mkdir "..\deploy_folder"
+          xcopy /E /I /Y "build" "..\deploy_folder\"  
